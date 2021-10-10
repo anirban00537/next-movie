@@ -41,8 +41,8 @@ const index = ({ coverImgArr }) => {
 
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>{coverImgArr[0].original_title}</h1>
-              <p>{coverImgArr[0].overview}</p>
+              <h1>{coverImgArr[0]?.original_title}</h1>
+              <p>{coverImgArr[0]?.overview}</p>
             </div>
           </div>
         </div>
@@ -60,8 +60,8 @@ const index = ({ coverImgArr }) => {
 
           <div class="container">
             <div class="carousel-caption text-end">
-              <h1>{coverImgArr[1].original_title}</h1>
-              <p>{coverImgArr[1].overview}</p>
+              <h1>{coverImgArr[1]?.original_title}</h1>
+              <p>{coverImgArr[1]?.overview}</p>
             </div>
           </div>
         </div>
@@ -78,8 +78,8 @@ const index = ({ coverImgArr }) => {
 
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>{coverImgArr[2].original_title}</h1>
-              <p>{coverImgArr[2].overview}</p>
+              <h1>{coverImgArr[2]?.original_title}</h1>
+              <p>{coverImgArr[2]?.overview}</p>
             </div>
           </div>
         </div>
