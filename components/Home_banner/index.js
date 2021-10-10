@@ -1,7 +1,6 @@
 import React from "react";
 
 const index = ({ coverImgArr }) => {
-  console.log(coverImgArr[0]);
   return (
     <div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -42,72 +41,45 @@ const index = ({ coverImgArr }) => {
 
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p>
-                Some representative placeholder content for the first slide of
-                the carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">
-                  Sign up today
-                </a>
-              </p>
+              <h1>{coverImgArr[0].original_title}</h1>
+              <p>{coverImgArr[0].overview}</p>
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <svg
-            class="bd-placeholder-img"
-            width="100%"
-            height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777"></rect>
-          </svg>
 
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>
-                Some representative placeholder content for the second slide of
-                the carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">
-                  Learn more
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
         <div class="carousel-item active">
-          <svg
+          <img
             class="bd-placeholder-img"
             width="100%"
             height="100%"
-            xmlns="http://www.w3.org/2000/svg"
+            src={`${process.env.NEXT_PUBLIC_IMG_URL}${coverImgArr[1]?.poster_path}`}
             aria-hidden="true"
             preserveAspectRatio="xMidYMid slice"
             focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777"></rect>
-          </svg>
+          />
 
           <div class="container">
             <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>
-                Some representative placeholder content for the third slide of
-                this carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">
-                  Browse gallery
-                </a>
-              </p>
+              <h1>{coverImgArr[1].original_title}</h1>
+              <p>{coverImgArr[1].overview}</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item banner_height">
+          <img
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            src={`${process.env.NEXT_PUBLIC_IMG_URL}${coverImgArr[2]?.poster_path}`}
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>{coverImgArr[2].original_title}</h1>
+              <p>{coverImgArr[2].overview}</p>
             </div>
           </div>
         </div>
